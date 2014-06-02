@@ -1,5 +1,5 @@
 # Goverment website template git repository
-**uthor Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
+**author Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
 
 ###### CHANGE LOGS
 **05-20-2014**
