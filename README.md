@@ -1,13 +1,7 @@
-<?php
-/**
- * Goverment website template git repository
- * @author Voltz Jeturian voltz.jeturian@icto.dost.gov.ph
- */
+* Goverment website template git repository
+* @author Voltz Jeturian voltz.jeturian@icto.dost.gov.ph
 
-?>
-/**
- * CHANGE LOGS
- */
+CHANGE LOGS
 05-20-2014
 - created iGOv GWT Theme
 -- installed foundation js/css framework
