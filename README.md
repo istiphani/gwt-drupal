@@ -1,5 +1,5 @@
 # Goverment website template git repository
-**author Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
+**Authored by: Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
 
 ###### CHANGE LOGS
 **05-20-2014**
@@ -21,7 +21,7 @@
 - Created block settings for transparency seal Block, when the theme is intalled, it automatically place itself on the left sidebar by default but can be rearranged to different regions
 
 **05-26-2014**
-- Deleted block settings for GWT sliders, must used content types instead
+- ~~Deleted block settings for GWT sliders, must used content types instead~~
 
 **05-28-2014**
 - added install script that adds automatically the gwt slides content type
