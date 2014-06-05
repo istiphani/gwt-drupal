@@ -95,6 +95,18 @@ html body.admin-menu{
 #navigation .menu li.last{
 	padding-right: 0;
 }
+.top-bar-section ul li > a{
+	font-size: 13px;
+}
+.top-bar .toggle-topbar.menu-icon{
+	right: 5px;
+	top: 16px;
+	position: absolute;
+}
+.top-bar .toggle-topbar.menu-icon a span{
+	-webkit-box-shadow: 0 13px 0 1px white, 0 19px 0 1px white, 0 25px 0 1px white;
+	box-shadow: 0 13px 0 1px white, 0 19px 0 1px white, 0 25px 0 1px white;
+}
 
 /** top bar right navigation **/
 .region-top-bar-right{
@@ -107,12 +119,31 @@ html body.admin-menu{
 	clear: none;
 	height: 40px;
 	width: 0;
-	float: right;
+	float: left;
 }
 .region-top-bar-right .block{
-	float: right;
+	float: left;
 	margin: 0 10px;
 }
+/** top bar right navigation mobile expanded **/
+#top-bar.expanded .region-top-bar-right{
+	width: 100%;
+}
+#top-bar.expanded .region-top-bar-right .block{
+	width: 100%;
+	margin: 0;
+}
+#top-bar.expanded .region-top-bar-right .block .menu li{
+	width: 100%;
+}
+#top-bar.expanded .region-top-bar-right div.divider{
+	border-bottom: solid 1px #2b2b2b;
+	border-top: solid 1px black;
+	clear: both;
+	height: 1px;
+	width: 100%;
+}
+
 /** block search bar **/
 #block-search-form{
 }
@@ -138,6 +169,12 @@ html body.admin-menu{
 }
 
 /** banner **/
+.region-banner{
+}
+.region-banner .block{
+	margin: 0;
+}
+
 #banner{
 	background-color: #1f3a70;
 	padding: 0;
@@ -166,6 +203,7 @@ html body.admin-menu{
 	background: url(../images/bg_direction_nav_orbit.png) no-repeat 0 0;
 	width: 50px;
 	height: 60px;
+	margin-top: -25px;
 	display: block;
 	position: absolute;
 	top: 50%;

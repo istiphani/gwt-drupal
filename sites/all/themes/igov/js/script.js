@@ -6,7 +6,6 @@
  * the README.txt next to this file.
  */
  
-jQuery(document).foundation();
 
 // JavaScript should be made compatible with libraries other than jQuery by
 // wrapping it with an "anonymous closure". See:
@@ -19,12 +18,22 @@ jQuery(document).foundation();
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+	$(document).foundation();
     // add a place holder for the search text field
     $('#block-search-form input[name="search_block_form"]').attr('placeholder', 'Search...');
 
     $(".banner-rsslides").responsiveSlides({
     	nav: true,
     	pager: true
+    });
+
+    // js hover fix
+    $('.dropdown').mouseout(function(e){
+    	$(this).removeClass('hover');
+    });
+    
+    $('.has-dropdown').mouseout(function(e){
+    	$(this).removeClass('hover');
     });
   }
 };
