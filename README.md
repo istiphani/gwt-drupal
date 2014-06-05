@@ -38,3 +38,4 @@
 
 **06-06-2014**
 - responsive menu is now working
+- updated the fontsize of the menu
