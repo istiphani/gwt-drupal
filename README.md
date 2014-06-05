@@ -35,3 +35,6 @@
 **06-05-2014**
 - created and styled the banner slide show
 - upon adding new gwt_slides it automatically adds to the banner slider block module
+
+**06-06-2014**
+- responsive menu is now working
