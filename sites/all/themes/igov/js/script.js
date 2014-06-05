@@ -21,6 +21,11 @@ Drupal.behaviors.my_custom_behavior = {
 
     // add a place holder for the search text field
     $('#block-search-form input[name="search_block_form"]').attr('placeholder', 'Search...');
+
+    $(".banner-rsslides").responsiveSlides({
+    	nav: true,
+    	pager: true
+    });
   }
 };
 
