@@ -68,7 +68,7 @@ stylesheets[all][] = css/responsiveslides.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = js/responsiveslides.min.js
-scripts[] = js/zepto.js
+; scripts[] = js/zepto.js
 scripts[] = js/foundation.min.js
 scripts[] = js/foundation/foundation.alerts.js
 scripts[] = js/foundation/foundation.clearing.js
@@ -161,7 +161,7 @@ settings[zen_wireframes]           = 0
 ; GWT setting configurations
 ; mandatory transparency seal settings, set to 0 to show the seal to left or 1 if right
 ; only if both sidebars are present, if only one side bar is present always show igov_trans_seal
-settings[igov_trans_seal]          = 0
+; settings[igov_trans_seal]          = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.

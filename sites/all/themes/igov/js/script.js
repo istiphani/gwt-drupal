@@ -23,6 +23,7 @@ Drupal.behaviors.my_custom_behavior = {
     $('#block-search-form input[name="search_block_form"]').attr('placeholder', 'Search...');
 
     $(".banner-rsslides").responsiveSlides({
+        timeout: 10000,
     	nav: true,
     	pager: true
     });
