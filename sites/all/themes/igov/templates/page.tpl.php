@@ -22,7 +22,7 @@
         <nav id="top-bar" role="navigation" class="top-bar nomargin" tabindex="-1" data-topbar>
           <?php /** TODO: add a static gov.ph link **/ ?>
           <ul id="main-static-link" class="links inline clearfix">
-            <li><a href="http://www.gov.ph"><img src="<?php echo path_to_theme(); ?>/images/seal-govph.png"></a></li>
+            <li><a href="http://www.gov.ph"><img src="<?php echo drupal_get_path('theme', 'igov'); ?>/images/seal-govph.png"></a></li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
           <section class="top-bar-section">
