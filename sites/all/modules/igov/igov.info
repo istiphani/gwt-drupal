@@ -5,3 +5,4 @@ files[] = igov.module
 dependencies[] = image
 dependencies[] = field
 dependencies[] = block
+dependencies[] = jquery_update
