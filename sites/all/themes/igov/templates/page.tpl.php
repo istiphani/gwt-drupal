@@ -6,6 +6,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
+global $base_url;
 ?>
 
 <div id="page">
@@ -22,7 +23,7 @@
         <nav id="top-bar" role="navigation" class="top-bar nomargin" tabindex="-1" data-topbar>
           <?php /** TODO: add a static gov.ph link **/ ?>
           <ul id="main-static-link" class="links inline clearfix">
-            <li><a href="http://www.gov.ph"><img src="<?php echo drupal_get_path('theme', 'igov'); ?>/images/seal-govph.png"></a></li>
+            <li><a href="http://www.gov.ph"><img src="<?php echo $base_url.'/'.drupal_get_path('theme', 'igov'); ?>/images/seal-govph.png"></a></li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
           <section class="top-bar-section">
@@ -78,9 +79,19 @@
   <?php if(isset($page['banner'])): ?>
   <div id="banner">
     <div class="row">
-      <div class="large-12 columns">
+      <div class="columns<?php print $banner_class ?>">
         <?php print render($page['banner']); ?>
       </div>
+      <?php if($banner_2 = render($page['banner_2'])): ?>
+        <div class="columns<?php print $banner_2_class ?>">
+          <?php print $banner_2; ?>
+        </div>
+      <?php endif ?>
+      <?php if($banner_3 = render($page['banner_3'])): ?>
+      <div class="columns<?php print $banner_3_class ?>">
+        <?php print $banner_3; ?>
+      </div>
+      <?php endif ?>
     </div>
   </div>
   <?php endif; ?>
@@ -127,7 +138,28 @@
     </div>
   </div>
 
-  <?php print render($page['footer']); ?>
+  <footer id="footer">
+    <div class="row">
+      <div class="columns<?php print $footer_class ?>">
+        <?php print render($page['footer']); ?>
+      </div>
+      <?php if($footer_2 = render($page['footer_2'])): ?>
+        <div class="columns<?php print $footer_2_class ?>">
+          <?php print $footer_2; ?>
+        </div>
+      <?php endif ?>
+      <?php if($footer_3 = render($page['footer_3'])): ?>
+      <div class="columns<?php print $footer_3_class ?>">
+        <?php print $footer_3; ?>
+      </div>
+      <?php endif ?>
+      <?php if($footer_4 = render($page['footer_4'])): ?>
+      <div class="columns<?php print $footer_4_class ?>">
+        <?php print $footer_4; ?>
+      </div>
+      <?php endif ?>
+    </div>
+  </footer>
   <?php print render($page['footer_standard']); ?>
 </div>
 

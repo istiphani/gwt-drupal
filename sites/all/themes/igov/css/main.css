@@ -180,14 +180,13 @@ html body.admin-menu{
 
 #banner{
 	background-color: #1f3a70;
-	padding: 0;
+	padding: 30px 0;
 	/*max-height: 460px; allow more dynamic height of banner*/
 }
 
 /** banner slider **/
 #block-igov-igov-slides{
 	position: relative;
-	padding-top: 30px;
 }
 #block-igov-igov-slides .banner-rsslides{
 }
@@ -224,7 +223,8 @@ html body.admin-menu{
 }
 #block-igov-igov-slides .rslides_tabs{
 	text-align: center;
-	margin: 10px 0;
+	padding: 10px 0;
+	margin-bottom: -30px;
 }
 #block-igov-igov-slides .rslides_tabs li{
 	display: inline-block;

@@ -7,10 +7,6 @@
  * @see https://drupal.org/node/1728140
  */
 ?>
-<?php if ($content): ?>
-  <footer id="footer" class="<?php print $classes; ?>">
-  	<div class="row">
-    	<?php print $content; ?>
-    </div>
-  </footer>
-<?php endif; ?>
+<div class="<?php print $classes; ?>">
+	<?php print $content; ?>
+</div>

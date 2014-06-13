@@ -79,6 +79,79 @@ function igov_preprocess_page(&$variables, $hook) {
   else{
     $variables['content_class'] .= ' large-12';
   }
+
+  // create a dynamic column on banner
+  $variables['banner_class'] = ' large-12';
+  $variables['banner_2_class'] = '';
+  $variables['banner_3_class'] = '';
+  // if both banner are available
+  if($variables['page']['banner_2'] && $variables['page']['banner_3']){
+    $variables['banner_class'] = ' large-8';
+    $variables['banner_2_class'] = ' large-2';
+    $variables['banner_3_class'] = ' large-2';
+  }
+  elseif($variables['page']['banner_2'] && !$variables['page']['banner_3']){
+    $variables['banner_class'] = ' large-9';
+    $variables['banner_2_class'] = ' large-3';
+    //$variables['banner_3_class'] = '';
+  }
+  elseif(!$variables['page']['banner_2'] && $variables['page']['banner_3']){
+    $variables['banner_class'] = ' large-9';
+    //$variables['banner_2_class'] = '';
+    $variables['banner_3_class'] = ' large-3';
+  }
+
+  // create a dynamic column on agency footer
+  $variables['footer_class'] = ' large-12';
+  $variables['footer_2_class'] = '';
+  $variables['footer_3_class'] = '';
+  $variables['footer_4_class'] = '';
+  if($variables['page']['footer_2']){
+    $variables['footer_class'] = ' large-6';
+    $variables['footer_2_class'] = ' large-6';
+    $variables['footer_3_class'] = ' large-3';
+    $variables['footer_4_class'] = ' large-3';
+    if($variables['page']['footer_3'] && $variables['page']['footer_4']){
+      $variables['footer_class'] = ' large-3';
+      $variables['footer_2_class'] = ' large-3';
+    }
+    elseif(!$variables['page']['footer_3'] && $variables['page']['footer_4']){
+      $variables['footer_2_class'] = ' large-3';
+      $variables['footer_3_class'] = '';
+      $variables['footer_4_class'] = '';
+      $variables['footer_4_class'] = ' large-3';
+    }
+    elseif($variables['page']['footer_3'] && !$variables['page']['footer_4']){
+      $variables['footer_2_class'] = ' large-3';
+      $variables['footer_3_class'] = ' large-3';
+      $variables['footer_4_class'] = '';
+    }
+    elseif(!$variables['page']['footer_3'] && !$variables['page']['footer_4']){
+      $variables['footer_2_class'] = ' large-3';
+      $variables['footer_3_class'] = '';
+      $variables['footer_4_class'] = '';
+    }
+  }
+  else{
+    $variables['footer_class'] = ' large-6';
+    $variables['footer_2_class'] = '';
+    $variables['footer_3_class'] = ' large-3';
+    $variables['footer_4_class'] = ' large-3';
+    if(!$variables['page']['footer_3'] && $variables['page']['footer_4']){
+      $variables['footer_3_class'] = ' large-6';
+      $variables['footer_4_class'] = '';
+    }
+    elseif($variables['page']['footer_3'] && !$variables['page']['footer_4']){
+      $variables['footer_3_class'] = '';
+      $variables['footer_4_class'] = ' large-6';
+    }
+    elseif(!$variables['page']['footer_3'] && !$variables['page']['footer_4']){
+      $variables['footer_class'] = ' large-12';
+      $variables['footer_3_class'] = '';
+      $variables['footer_4_class'] = '';
+    }
+  }
+
   /*
   // mandatory transparency seal configuration settings 
   $variables['igov_trans_seal_left'] = '';
