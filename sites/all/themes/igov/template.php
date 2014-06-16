@@ -86,9 +86,9 @@ function igov_preprocess_page(&$variables, $hook) {
   $variables['banner_3_class'] = '';
   // if both banner are available
   if($variables['page']['banner_2'] && $variables['page']['banner_3']){
-    $variables['banner_class'] = ' large-8';
-    $variables['banner_2_class'] = ' large-2';
-    $variables['banner_3_class'] = ' large-2';
+    $variables['banner_class'] = ' large-6';
+    $variables['banner_2_class'] = ' large-3';
+    $variables['banner_3_class'] = ' large-3';
   }
   elseif($variables['page']['banner_2'] && !$variables['page']['banner_3']){
     $variables['banner_class'] = ' large-9';
