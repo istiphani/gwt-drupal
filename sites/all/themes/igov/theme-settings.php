@@ -1,4 +1,8 @@
 <?php
+// add template js and css for the inputs
+drupal_add_js(drupal_get_path('theme', 'igov') .'/js/spectrum/spectrum.js');
+drupal_add_css(drupal_get_path('theme', 'igov') .'/js/spectrum/spectrum.css');
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  *
@@ -56,6 +60,30 @@ function igov_form_system_theme_settings_alter(&$form, &$form_state, $form_id = 
     ),
   );
   */
+  $form['igov']['masthead_background_color_enabled'] = array(
+
+  );
+
+  $form['igov']['masthead_background_color'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Masthead Background Color:'), 
+    '#default_value' => theme_get_setting('igv_masthead_background_color'),
+    '#size' => 10, 
+    '#maxlength' => 30, 
+    '#field_prefix' => '<div class="colorpicker-container">',
+    '#field_suffix' => '</div>
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $(\'.colorpicker-container input[type="text"]\').spectrum({
+          flat: true,
+          showInput: true,
+          preferredFormat: "hex"
+      });
+    })(jQuery);
+    </script>',
+    // TODO: add a script that adds color picker
+  );
+
   /**
    * end igov GWT edit
    */

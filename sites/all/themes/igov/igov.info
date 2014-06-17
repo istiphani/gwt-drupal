@@ -84,6 +84,7 @@ scripts[] = js/foundation/foundation.reveal.js
 scripts[] = js/foundation/foundation.section.js
 scripts[] = js/foundation/foundation.tooltips.js
 scripts[] = js/foundation/foundation.topbar.js
+scripts[] = js/spectrum/spectrum.js
 scripts[] = js/script.js
 
 

@@ -110,6 +110,10 @@ html body.admin-menu{
 	-webkit-box-shadow: 0 13px 0 1px white, 0 19px 0 1px white, 0 25px 0 1px white;
 	box-shadow: 0 13px 0 1px white, 0 19px 0 1px white, 0 25px 0 1px white;
 }
+.top-bar-section .dropdown li .dropdown {
+	left: 100%;
+	top: -2px;
+}
 
 /** top bar right navigation **/
 .region-top-bar-right{
