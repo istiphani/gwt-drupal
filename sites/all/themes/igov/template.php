@@ -152,6 +152,7 @@ function igov_preprocess_page(&$variables, $hook) {
     }
   }
 
+  // TODO: load the color used
   /*
   // mandatory transparency seal configuration settings 
   $variables['igov_trans_seal_left'] = '';

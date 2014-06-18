@@ -24,4 +24,5 @@ disable responsive.css, use foundation.css instead
 /* @import "theme-B.css"; */
 
 @import "foundation/foundation.css";
+@import "theme.css";
 @import "main.css";

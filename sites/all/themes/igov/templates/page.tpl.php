@@ -50,7 +50,7 @@ global $base_url;
     </div>
   </div>
 
-  <header class="header" id="header">
+  <header class="header" id="header" style="">
     <div class="row">
       <section class="header-section large-12 columns">
         <?php if ($logo): ?>
@@ -161,6 +161,7 @@ global $base_url;
     </div>
   </footer>
   <?php print render($page['footer_standard']); ?>
+<div><a href="#page" id="back-to-top">Back to Top</a></div>
 </div>
 
 <?php print render($page['bottom']); ?>

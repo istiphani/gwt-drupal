@@ -11,6 +11,10 @@
  */
 
 /**
+ * DO NOT MODIFY THEME STYLE
+ * please add your stylings to main.css
+ */
+/**
  * font declaration
  */
 
@@ -280,7 +284,6 @@ html body.admin-menu{
 	padding: 30px 0;
 	background: #e9e9e9;
 	color: #666;
-	margin-bottom: -200px;
 }
 #footer-standard a{
 	color: #666;
@@ -288,6 +291,24 @@ html body.admin-menu{
 #footer-standard .menu{
 	padding-left: 20px;
 	margin-bottom: 20px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #111111;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+#back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
 }
 
 /**

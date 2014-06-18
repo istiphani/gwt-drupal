@@ -34,13 +34,28 @@ Drupal.behaviors.my_custom_behavior = {
     	pager: true
     });
 
-    // js hover fix
+    // js nav hover fix
     $('.dropdown').mouseout(function(e){
     	$(this).removeClass('hover');
     });
-    
     $('.has-dropdown').mouseout(function(e){
     	$(this).removeClass('hover');
+    });
+
+    var offset = 220;
+    var duration = 500;
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+            $('#back-to-top').fadeIn(duration);
+        } else {
+            $('#back-to-top').fadeOut(duration);
+        }
+    });
+    
+    $('#back-to-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, duration);
+        return false;
     });
   }
 };
