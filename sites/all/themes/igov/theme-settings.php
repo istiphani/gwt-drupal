@@ -61,10 +61,10 @@ function igov_form_system_theme_settings_alter(&$form, &$form_state, $form_id = 
   );
   */
 
-  $form['igov']['masthead_background_color'] = array(
+  $form['igov']['igov_masthead_background_color'] = array(
     '#type' => 'textfield', 
     '#title' => t('Masthead Background Color:'), 
-    '#default_value' => theme_get_setting('igv_masthead_background_color'),
+    '#default_value' => theme_get_setting('igov_masthead_background_color'),
     '#size' => 10, 
     '#maxlength' => 30, 
     '#description' => t('Select the background color of the Masthead region. Select "X" to disable the color and use the default background color.'), 
@@ -73,10 +73,10 @@ function igov_form_system_theme_settings_alter(&$form, &$form_state, $form_id = 
     // TODO: add a script that adds color picker
   );
 
-  $form['igov']['banner_background_color'] = array(
+  $form['igov']['igov_banner_background_color'] = array(
     '#type' => 'textfield', 
     '#title' => t('Banner Background Color:'), 
-    '#default_value' => theme_get_setting('igv_banner_background_color'),
+    '#default_value' => theme_get_setting('igov_banner_background_color'),
     '#size' => 10, 
     '#maxlength' => 30, 
     '#description' => t('Select the background color of the Masthead region. Select "X" to disable the color and use the default background color.'), 

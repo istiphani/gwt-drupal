@@ -39,3 +39,11 @@
 **06-06-2014**
 - responsive menu is now working
 - updated the fontsize of the menu
+
+**06-13-2014**
+- fixed revision
+  - added dynamic regions for banner
+  - added dynamic regions for agency footer
+
+**06-18-2014**
+- added bg colors to the theme settings for masthead and banner

@@ -50,7 +50,7 @@ global $base_url;
     </div>
   </div>
 
-  <header class="header" id="header" style="">
+  <header class="header" id="header" style="<?php echo $igov_masthead_bg; ?>">
     <div class="row">
       <section class="header-section large-12 columns">
         <?php if ($logo): ?>
@@ -77,7 +77,7 @@ global $base_url;
   </header>
 
   <?php if(isset($page['banner'])): ?>
-  <div id="banner">
+  <div id="banner" style="<?php echo $igov_banner_bg; ?>">
     <div class="row">
       <div class="columns<?php print $banner_class ?>">
         <?php print render($page['banner']); ?>

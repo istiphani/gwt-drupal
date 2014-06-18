@@ -152,7 +152,18 @@ function igov_preprocess_page(&$variables, $hook) {
     }
   }
 
-  // TODO: load the color used
+  // TODO: load the color used for masthead
+  $igov_masthead_bg = theme_get_setting('igov_masthead_background_color');
+  if($igov_masthead_bg){
+    $igov_masthead_bg = 'background: '.$igov_masthead_bg.';';
+  }
+  $variables['igov_masthead_bg'] = $igov_masthead_bg;
+
+  $igov_banner_bg = theme_get_setting('igov_banner_background_color');
+  if($igov_banner_bg){
+    $igov_banner_bg = 'background: '.$igov_banner_bg.';';
+  }
+  $variables['igov_banner_bg'] = $igov_banner_bg;
   /*
   // mandatory transparency seal configuration settings 
   $variables['igov_trans_seal_left'] = '';
