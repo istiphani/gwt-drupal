@@ -1,4 +1,4 @@
-# Goverment website template git repository
+# Goverment Website Template (GWT) for Dupal
 **Authored by: Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
 
 ###### CHANGE LOGS
