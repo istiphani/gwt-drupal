@@ -47,3 +47,7 @@
 
 **06-18-2014**
 - added bg colors to the theme settings for masthead and banner
+
+**07-11-2014**
+- removed dependency from zen
+- revamped the design to version 2 layout design.
