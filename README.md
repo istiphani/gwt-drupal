@@ -7,3 +7,5 @@
 **07-11-2014**
 - removed dependency from zen
 - revamped the design to version 2 layout design.
+- added masthead backgorund image upload
+- added banner backgorundd image upload
