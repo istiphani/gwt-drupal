@@ -1,25 +1,25 @@
 <?php
 
 /**
- * @file installation file of igov GWT theme module
+ * @file installation file of gwt_drupal_helper GWT theme module
  */
 
 /**
  * implementation of hook_install
  */
-function igov_install(){
-	// $igov_slides = 'public://igov_slides'; 
-	// file_prepare_directory($igov_slides, FILE_CREATE_DIRECTORY);
+function gwt_drupal_helper_install(){
+	// $gwt_drupal_helper_slides = 'public://gwt_drupal_helper_slides'; 
+	// file_prepare_directory($gwt_drupal_helper_slides, FILE_CREATE_DIRECTORY);
 
-  _igov_install_style_slides();
-  _igov_install_content_slides();
+  _gwt_drupal_helper_install_style_slides();
+  _gwt_drupal_helper_install_content_slides();
 }
 
 /**
  * helper function
  * install image style slides
  */
-function _igov_install_style_slides(){
+function _gwt_drupal_helper_install_style_slides(){
   // normal banner image style
   $banner_normal = image_style_save(array('name' => 'gwt_slides_banner_normal'));
 
@@ -42,7 +42,7 @@ function _igov_install_style_slides(){
  * helper function
  * install content type gwt_slides
  */
-function _igov_install_content_slides(){
+function _gwt_drupal_helper_install_content_slides(){
   $entity_name = 'gwt_slides';
   // create a new content type for slider
   if (!in_array($entity_name, node_type_get_names())) {
@@ -155,17 +155,17 @@ function _igov_install_content_slides(){
 /**
  * implementation of hook_uninstall
  */
-function igov_uninstall(){
+function gwt_drupal_helper_uninstall(){
   // TODO: delete unecessary files and folder
-  _igov_uninstall_style_slides();
-  _igov_uninstall_content_slides();
+  _gwt_drupal_helper_uninstall_style_slides();
+  _gwt_drupal_helper_uninstall_content_slides();
 }
 
 /**
  * helper function
  * uninstall the style slides
  */
-function _igov_uninstall_style_slides(){
+function _gwt_drupal_helper_uninstall_style_slides(){
   image_style_delete(image_style_load('gwt_slides_banner_normal'));
 }
 
@@ -173,7 +173,7 @@ function _igov_uninstall_style_slides(){
  * helper function
  * uninstall the content type gwt_slides
  */
-function _igov_uninstall_content_slides(){
+function _gwt_drupal_helper_uninstall_content_slides(){
   $entity_name = 'gwt_slides';
 
   // uninstall content slides and its fields

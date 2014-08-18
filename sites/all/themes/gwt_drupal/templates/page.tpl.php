@@ -180,14 +180,15 @@ global $base_url;
   </footer>
   <div id="gwt-standard-footer">
   </div>
-  <script>(function(d, s, id) {
-    var js, gjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    //js.src = "//gwt-footer.googlecode.com/git/footer.js";
-    js.src = "http://localhost/gwt-footer/footer.js";
-    gjs.parentNode.insertBefore(js, gjs);
-  }(document, 'script', 'gwt-footer-jsdk'));
+  <script>
+    (function(d, s, id) {
+      var js, gjs = d.getElementById('gwt-standard-footer');
+
+      js = d.createElement(s); js.id = id;
+      js.src = "http://gwt-footer.googlecode.com/git/footer.js";
+      gjs.parentNode.insertBefore(js, gjs);
+
+    }(document, 'script', 'gwt-footer-jsdk'));
   </script>
 <div><a href="#page" id="back-to-top">Back to Top</a></div>
 </div>

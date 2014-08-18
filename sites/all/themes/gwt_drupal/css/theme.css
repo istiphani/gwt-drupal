@@ -29,7 +29,7 @@ body, div, dl, dt, dd, ul, ol, li, pre, form, p, blockquote, th, td {
 	font-size: 13px;
 }
 body.toolbar-drawer{
-	padding-top: 0;
+	padding-top: 0 !important;
 }
 
 /**
@@ -243,16 +243,16 @@ border: 1px solid #d8d8d8;
 }
 
 /** banner slider **/
-#block-igov-igov-slides{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides{
 	position: relative;
 	min-height: 290px;
 }
-#block-igov-igov-slides .banner-rsslides{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .banner-rsslides{
 }
-#block-igov-igov-slides .banner-rsslides li{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .banner-rsslides li{
 	position: relative;
 }
-#block-igov-igov-slides .banner-rsslides li .rs-caption{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .banner-rsslides li .rs-caption{
 	position: absolute;
 	bottom: 0;
 	background-color: rgba(51, 51, 51, 0.7);
@@ -260,7 +260,7 @@ border: 1px solid #d8d8d8;
 	padding: 10px 14px;
 	width: 100%;
 }
-#block-igov-igov-slides .rslides_nav{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_nav{
 	background: url(../images/slider-sprites.png) no-repeat 0 0;
 	width: 35px;
 	height: 60px;
@@ -273,20 +273,20 @@ border: 1px solid #d8d8d8;
 	text-indent: -9999px;
 	z-index: 100;
 }
-#block-igov-igov-slides .rslides_nav.prev{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_nav.prev{
 	left: 0;
 }
-#block-igov-igov-slides .rslides_nav.next{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_nav.next{
 	right: 0;
 	background-position: -35px 0;
 }
-#block-igov-igov-slides .rslides_nav.prev:hover{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_nav.prev:hover{
 	background-position: 0 -60px;
 }
-#block-igov-igov-slides .rslides_nav.next:hover{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_nav.next:hover{
 	background-position: -35px -60px;
 }
-#block-igov-igov-slides .rslides_tabs{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_tabs{
 	text-align: center;
 	padding: 0;
 	margin-bottom: 0;
@@ -295,11 +295,11 @@ border: 1px solid #d8d8d8;
 	width: 100%;
 	bottom: -23px;
 }
-#block-igov-igov-slides .rslides_tabs li{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_tabs li{
 	display: inline-block;
 	padding: 0 3px;
 }
-#block-igov-igov-slides .rslides_tabs li a{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_tabs li a{
 	width: 13px;
 	height: 13px;
 	display: block;
@@ -307,10 +307,10 @@ border: 1px solid #d8d8d8;
 	cursor: pointer;
 	text-indent: -9999px;
 }
-#block-igov-igov-slides .rslides_tabs li a:hover{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_tabs li a:hover{
 	background-position: 0 -13px;
 }
-#block-igov-igov-slides .rslides_tabs li.rslides_here a{
+#block-gwt-drupal-helper-gwt-drupal-helper-slides .rslides_tabs li.rslides_here a{
 	background-position: 0 -26px;
 }
 /** main **/
