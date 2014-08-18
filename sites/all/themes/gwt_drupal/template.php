@@ -404,23 +404,45 @@ function gwt_drupal_preprocess_page(&$variables, $hook) {
   $variables['banner_class'] = ' large-12';
   $variables['banner_2_class'] = '';
   $variables['banner_3_class'] = '';
-  // if both banner are available
-  if($variables['page']['banner_2'] && $variables['page']['banner_3']){
-    $variables['banner_class'] = ' large-6';
-    $variables['banner_2_class'] = ' large-3';
-    $variables['banner_3_class'] = ' large-3';
+  $variables['banner_container_class'] = ' has-border';
+
+  if($variables['page']['banner']){
+    // if both banner are available
+    if($variables['page']['banner_2'] && $variables['page']['banner_3']){
+      $variables['banner_class'] = ' large-6';
+      $variables['banner_2_class'] = ' large-3';
+      $variables['banner_3_class'] = ' large-3';
+    }
+    elseif($variables['page']['banner_2'] && !$variables['page']['banner_3']){
+      $variables['banner_class'] = ' large-8';
+      $variables['banner_2_class'] = ' large-4';
+      //$variables['banner_3_class'] = '';
+    }
+    elseif(!$variables['page']['banner_2'] && $variables['page']['banner_3']){
+      $variables['banner_class'] = ' large-9';
+      //$variables['banner_2_class'] = '';
+      $variables['banner_3_class'] = ' large-3';
+    }
+    $variables['banner_class'] .= ' show-for-medium-up';
   }
-  elseif($variables['page']['banner_2'] && !$variables['page']['banner_3']){
-    $variables['banner_class'] = ' large-8';
-    $variables['banner_2_class'] = ' large-4';
-    //$variables['banner_3_class'] = '';
+  else{
+    $variables['banner_class'] = '';
+    $variables['banner_container_class'] = '';
+    // if both banner are available
+    if($variables['page']['banner_2'] && $variables['page']['banner_3']){
+      $variables['banner_2_class'] = ' large-6';
+      $variables['banner_3_class'] = ' large-6';
+    }
+    elseif($variables['page']['banner_2'] && !$variables['page']['banner_3']){
+      $variables['banner_2_class'] = ' large-12';
+      //$variables['banner_3_class'] = '';
+    }
+    elseif(!$variables['page']['banner_2'] && $variables['page']['banner_3']){
+      //$variables['banner_2_class'] = '';
+      $variables['banner_3_class'] = ' large-12';
+    }
+    $variables['banner_class'] .= ' show-for-medium-up';
   }
-  elseif(!$variables['page']['banner_2'] && $variables['page']['banner_3']){
-    $variables['banner_class'] = ' large-9';
-    //$variables['banner_2_class'] = '';
-    $variables['banner_3_class'] = ' large-3';
-  }
-  $variables['banner_class'] .= ' show-for-medium-up';
 
   // create a dynamic column on banner
   $variables['name_slogan_class'] = ' large-12';

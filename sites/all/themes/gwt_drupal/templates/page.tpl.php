@@ -90,12 +90,18 @@ global $base_url;
     </section>
   </header>
 
-  <?php if(isset($page['banner'])): ?>
+  <?php
+  if(isset($page['banner']) ||
+    isset($page['banner_2']) ||
+    isset($page['banner_3'])):
+?>
   <div id="banner" <?php print $gwt_drupal_banner_styles; ?>>
-    <div class="row collapse">
+    <div class="row collapse<?php print $banner_container_class ?>">
+      <?php if($banner = render($page['banner'])): ?>
       <div class="columns<?php print $banner_class ?>">
-        <?php print render($page['banner']); ?>
+        <?php print $banner; ?>
       </div>
+      <?php endif ?>
       <?php if($banner_2 = render($page['banner_2'])): ?>
         <div class="columns<?php print $banner_2_class ?>">
           <div class="banner-content">
