@@ -13,6 +13,7 @@
 **08-18-2014**
 - fix install hook file
 - added banner dynamics
+- fix helper module bug
 
 ###### TODO
 - must add a jQuery that supports foundation, use: var jQuery_1_9 = $.noConflict(true);

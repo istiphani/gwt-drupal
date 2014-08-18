@@ -1,15 +1,15 @@
 <?php
 /**
- * gwt_drupal_helper theme module
+ * igov theme module
  */
 
 /**
  * constant declaration
  */
 // base image name
-define('GWT_DRUPAL_HELPER_SLIDER_IMAGE_NAME', 'slides_image-');
+define('GWT_SLIDER_IMAGE_NAME', 'slides_image-');
 // slider directory
-define('GWT_DRUPAL_HELPER_SLIDER_DIRECTORY', 'gwt_drupal_helper_slides/');
+define('GWT_SLIDER_DIRECTORY', 'gwt_drupal_helper_slides/');
 
 // Create a block that handles the banner slider
 function gwt_drupal_helper_block_info(){
@@ -140,15 +140,12 @@ function _gwt_drupal_helper_get_gwt_slides(){
 
     // TODO: add link to the image and the caption.
 
-    // TODO: create a placeholder image if image does not exists in field
+    // output the slide_image
+    // TODO: how to add image style here
     $field_gwt_slide_image = field_get_items('node', $node, 'field_gwt_slide_image');
-    if($field_gwt_slide_image){
-      // output the slide_image
-      $field_gwt_slide_image_output = field_view_value('node', $node, 'field_gwt_slide_image', $field_gwt_slide_image[0]);
+    $field_gwt_slide_image_output = field_view_value('node', $node, 'field_gwt_slide_image', $field_gwt_slide_image[0]);
 
-      $output .= render($field_gwt_slide_image_output);
-      
-    }
+    $output .= render($field_gwt_slide_image_output);
     //return $output;
 
     $field_gwt_image_caption = field_get_items('node', $node, 'field_gwt_image_caption');
