@@ -9,6 +9,7 @@
 - revamped the design to version 2 layout design.
 - added masthead background image upload
 - added banner background image upload
+
 **08-18-2014**
 - fix install hook file
 
