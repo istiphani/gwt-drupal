@@ -1,4 +1,4 @@
-# Goverment Website Template (GWT) for Drupal
+# Goverment Website Template (GWT) for Dupal
 **Authored by: Voltz Jeturian voltz.jeturian@icto.dost.gov.ph**
 
 ### Version 2 design
@@ -7,6 +7,8 @@
 **07-11-2014**
 - removed dependency from zen
 - revamped the design to version 2 layout design.
+- added masthead background image upload
+- added banner background image upload
 **08-18-2014**
 - fix install hook file
 
