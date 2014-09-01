@@ -94,6 +94,7 @@ global $base_url;
   if(isset($page['banner']) ||
     isset($page['banner_2']) ||
     isset($page['banner_3'])):
+    // TODO: check if why banner is still showing if there are no blocks included
 ?>
   <div id="banner" <?php print $gwt_drupal_banner_styles; ?>>
     <div class="row collapse<?php print $banner_container_class ?>">
