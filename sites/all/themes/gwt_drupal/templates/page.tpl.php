@@ -20,7 +20,6 @@
       ?>
       <div class="small-12 large-12 columns toplayer">
         <nav id="top-bar" role="navigation" class="top-bar nomargin" tabindex="-1" data-topbar>
-          <?php /** TODO: add a static gov.ph link **/ ?>
           <ul id="main-static-link" class="links inline clearfix">
             <li id="static-link-gov"><h3><a href="http://www.gov.ph">GOVPH</a></h3></li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -93,7 +92,6 @@
   if($page['banner'] ||
     $page['banner_2'] ||
     $page['banner_3']):
-    // TODO: check if why banner is still showing if there are no blocks included
 ?>
   <div id="banner" <?php print $gwt_drupal_banner_styles; ?>>
     <div class="row collapse<?php print $banner_container_class ?>">

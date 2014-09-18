@@ -37,23 +37,6 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
     '#type'          => 'fieldset',
     '#title'         => t('Government Website Template(GWT) settings'),
   );
-  // TODO: add a settings for the transparency seal
-  // default 0
-  // 0 for left sidebar
-  // 1 for right sidebar
-  /*
-  $form['gwt_drupal']['gwt_drupal_trans_seal'] = array(
-    '#type' => 'select',
-    '#title' => 'Transparency Seal',
-    // TODO: add the law that states that transparency seal must always be shown to the site
-    '#description' => 'Set the transparency seal sidebar location',
-    '#default_value' => theme_get_setting('gwt_drupal_trans_seal'),
-    '#options'       => array(
-      '0'   => t('Left'),
-      '1' => t('Right'),
-    ),
-  );
-  */
 
   $form['gwt_drupal']['gwt_drupal_masthead_bg_color'] = array(
     '#type' => 'textfield', 
@@ -64,7 +47,6 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
     '#description' => t('Select the background color of the Masthead region. Select "X" to disable the color and use the default background color.'), 
     '#field_prefix' => '<div class="colorpicker-container">',
     '#field_suffix' => '</div>',
-    // TODO: add a script that adds color picker
   );
 
   $form['gwt_drupal']['gwt_drupal_masthead_font_color'] = array(
@@ -76,7 +58,6 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
     '#description' => t('Select the font color of the Masthead region. Select "X" to disable the color and use the default background color.'), 
     '#field_prefix' => '<div class="colorpicker-container">',
     '#field_suffix' => '</div>',
-    // TODO: add a script that adds color picker
   );
 
   $form['gwt_drupal']['gwt_drupal_masthead_bg_image'] = array(
@@ -111,7 +92,6 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
     '#description' => t('Select the font color of the Masthead region. Select "X" to disable the color and use the default background color.'), 
     '#field_prefix' => '<div class="colorpicker-container">',
     '#field_suffix' => '</div>',
-    // TODO: add a script that adds color picker
   );
 
   $form['gwt_drupal']['gwt_drupal_banner_bg_image'] = array(

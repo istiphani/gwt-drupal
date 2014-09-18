@@ -35,7 +35,19 @@ function _gwt_drupal_helper_install_style_slides(){
   image_effect_save($effect);
 
   // TODO: create an image style for full screen slider(1190x400)
-  // TODO: create an image style for half slider(775x270)
+  // create an image style for half slider(775x270)
+  $banner_normal = image_style_save(array('name' => 'gwt_slides_banner_half'));
+
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 775,
+      'height' => 270,
+    ),
+    'ieid' => 1,
+    'isid' => $banner_normal['isid'],
+  );
+  image_effect_save($effect);
 }
 
 /**
@@ -144,7 +156,8 @@ function _gwt_drupal_helper_install_content_slides(){
       'bundle' => $entity_name,
       'label' => st('Order Weight'),
       'description' => st('Ordering weight of the slider that will be shown in order. Lower values shall be shown first.'),
-      // TODO: set a default value of 0
+      // set the default value of 0
+      //'default_value' => 0,
       'required' => TRUE,
     );
     field_create_instance($instance);
@@ -156,7 +169,7 @@ function _gwt_drupal_helper_install_content_slides(){
  * implementation of hook_uninstall
  */
 function gwt_drupal_helper_uninstall(){
-  // TODO: delete unecessary files and folder
+  // TODO: delete the images files and folder
   _gwt_drupal_helper_uninstall_style_slides();
   _gwt_drupal_helper_uninstall_content_slides();
 }
@@ -167,6 +180,7 @@ function gwt_drupal_helper_uninstall(){
  */
 function _gwt_drupal_helper_uninstall_style_slides(){
   image_style_delete(image_style_load('gwt_slides_banner_normal'));
+  image_style_delete(image_style_load('gwt_slides_banner_half'));
 }
 
 /**

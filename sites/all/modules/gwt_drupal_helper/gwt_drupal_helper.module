@@ -62,7 +62,7 @@ function gwt_drupal_helper_block_configure($delta = '') {
 function gwt_drupal_helper_block_save($delta, $edit=array()){
   switch ($delta) {
     case 'gwt_drupal_helper_trans_seal':
-      // TODO: check if link exists
+      // check if link exists
       if(!drupal_valid_path($edit['trans_link'])){
         break;
       }
@@ -138,7 +138,7 @@ function _gwt_drupal_helper_get_gwt_slides(){
     */
     $output .= '<li>';
 
-    // TODO: add link to the image and the caption.
+    // add link to the image and the caption.
 
     // output the slide_image
     // TODO: how to add image style here
