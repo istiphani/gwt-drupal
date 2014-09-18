@@ -54,3 +54,5 @@ themes/
 update.php
 web.config
 xmlrpc.php
+
+.idea/

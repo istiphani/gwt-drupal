@@ -425,7 +425,7 @@ function gwt_drupal_preprocess_page(&$variables, $hook) {
     }
     $variables['banner_class'] .= ' show-for-medium-up';
   }
-  else{
+  elseif(!$variables['page']['banner']){
     $variables['banner_class'] = '';
     $variables['banner_container_class'] = '';
     // if both banner are available

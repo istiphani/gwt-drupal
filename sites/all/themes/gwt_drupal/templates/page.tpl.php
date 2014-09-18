@@ -6,7 +6,6 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
-global $base_url;
 ?>
 
 <div id="page">
@@ -91,9 +90,9 @@ global $base_url;
   </header>
 
   <?php
-  if(isset($page['banner']) ||
-    isset($page['banner_2']) ||
-    isset($page['banner_3'])):
+  if($page['banner'] ||
+    $page['banner_2'] ||
+    $page['banner_3']):
     // TODO: check if why banner is still showing if there are no blocks included
 ?>
   <div id="banner" <?php print $gwt_drupal_banner_styles; ?>>
