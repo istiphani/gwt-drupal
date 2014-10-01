@@ -15,6 +15,9 @@
 - added banner dynamics
 - fix helper module bug
 
+**10-01-2014**
+- added accesibility page
+
 ###### TODO
 - must add a jQuery that supports foundation, use: var jQuery_1_9 = $.noConflict(true);
   - remove dependecies of jquery update
