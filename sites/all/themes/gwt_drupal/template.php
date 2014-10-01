@@ -552,6 +552,77 @@ function gwt_drupal_preprocess_page(&$variables, $hook) {
     $variables['gwt_drupal_banner_styles'] .= 'color: '.$gwt_drupal_banner_font.'; ';
   }
   $variables['gwt_drupal_banner_styles'] .= '" ';
+
+  $accessibility = array();
+  $gwt_drupal_acc_statement = theme_get_setting('gwt_drupal_acc_statement') ? theme_get_setting('gwt_drupal_acc_statement') : '';
+  if($gwt_drupal_acc_statement){
+    $accessibility['0'] = array(
+      'url' => $gwt_drupal_acc_statement,
+      'text' => t('Accessibility Statement'),
+      );
+  }
+  $gwt_drupal_acc_home = theme_get_setting('gwt_drupal_acc_home') ? theme_get_setting('gwt_drupal_acc_home') : '';
+  if($gwt_drupal_acc_home){
+    $accessibility['1'] = array(
+      'url' => $gwt_drupal_acc_home,
+      'text' => t('Home'),
+      );
+  }
+  $gwt_drupal_acc_faq = theme_get_setting('gwt_drupal_acc_faq') ? theme_get_setting('gwt_drupal_acc_faq') : '';
+  if($gwt_drupal_acc_faq){
+    $accessibility['5'] = array(
+      'url' => $gwt_drupal_acc_maincontent,
+      'text' => t('Faqs'),
+      );
+  }
+  $gwt_drupal_acc_contact = theme_get_setting('gwt_drupal_acc_contact') ? theme_get_setting('gwt_drupal_acc_contact') : '';
+  if($gwt_drupal_acc_contact){
+    $accessibility['C'] = array(
+      'url' => $gwt_drupal_acc_contact,
+      'text' => t('Contact'),
+      );
+  }
+  $gwt_drupal_acc_feedback = theme_get_setting('gwt_drupal_acc_feedback') ? theme_get_setting('gwt_drupal_acc_feedback') : '';
+  if($gwt_drupal_acc_feedback){
+    $accessibility['K'] = array(
+      'url' => $gwt_drupal_acc_feedback,
+      'text' => t('Feedbacks'),
+      );
+  }
+  $gwt_drupal_acc_search = theme_get_setting('gwt_drupal_acc_search') ? theme_get_setting('gwt_drupal_acc_search') : 'search/node/';
+  if($gwt_drupal_acc_search){
+    $accessibility['S'] = array(
+      'url' => $gwt_drupal_acc_search,
+      'text' => t('Search'),
+      );
+  }
+
+  $variables['accesibility'] = '<ul>';
+  foreach($accessibility as $access_key => $data){
+    $variables['accesibility'] .= '<li>';
+    $variables['accesibility'] .= l(
+      $data['text'],
+      $data['url'],
+      array(
+        'attributes' => array(
+          'accesskey' => $access_key,
+          'class' => 'skips',
+          ),
+        )
+      );
+    $variables['accesibility'] .= '</li>';
+  }
+  $gwt_drupal_acc_maincontent = theme_get_setting('gwt_drupal_acc_maincontent') ? theme_get_setting('gwt_drupal_acc_maincontent') : '#main-content';
+  if($gwt_drupal_acc_maincontent){
+    $variables['accesibility'] .= '<li><a href="'.$gwt_drupal_acc_maincontent.'" accesskey="R">Main Content</a></li>';
+  }
+  $gwt_drupal_acc_sitemap = theme_get_setting('gwt_drupal_acc_sitemap') ? theme_get_setting('gwt_drupal_acc_sitemap') : '#footer';
+  if($gwt_drupal_acc_sitemap){
+    $variables['accesibility'] .= '<li><a href="'.$gwt_drupal_acc_sitemap.'" accesskey="M">Sitemap</a></li>';
+  }
+  $variables['accesibility'] .= '</ul>';
+
+  // TODO: create an auto accesibility page that loads all the accesibility theme_settings.
 }
 
 /**

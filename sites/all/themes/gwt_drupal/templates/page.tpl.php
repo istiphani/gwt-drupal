@@ -7,7 +7,9 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-
+<div id="accesibility-links" style="display: none;">
+<?php print $accesibility; ?>
+</div>
 <div id="page">
 
 

@@ -12,6 +12,8 @@ drupal_add_css(drupal_get_path('theme', 'gwt_drupal') .'/js/spectrum/spectrum.cs
  *   A keyed array containing the current state of the form.
  */
 function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+  global $base_url;
+
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
@@ -74,7 +76,7 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
   $form['gwt_drupal']['gwt_drupal_banner_bg_color'] = array(
     '#type' => 'textfield', 
     '#title' => t('Banner Background Color:'), 
-    '#default_value' => theme_get_setting('gwt_drupal_banner_background_color'),
+    '#default_value' => theme_get_setting('gwt_drupal_banner_bg_color'),
     '#size' => 10, 
     '#maxlength' => 30, 
     '#description' => t('Select the background color of the Masthead region. Select "X" to disable the color and use the default background color.'), 
@@ -118,6 +120,92 @@ function gwt_drupal_form_system_theme_settings_alter(&$form, &$form_state, $form
       });
     });
     </script>'
+  );
+
+  $form['gwt_drupal_acc'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Accessibility settings'),
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_label'] = array(
+    '#markup' => "
+    <label>Shortcut Keys Combination Activation</label>
+    <p>Combination keys used for each browser.</p>
+    <ul>
+    <li>Chrome for Linux press (Alt+Shift+shortcut_key)</li>
+    <li>Chrome for Windows press (Alt+shortcut_key)</li>
+    <li>For Firefox press (Alt+Shift+shortcut_key)</li>
+    <li>For Internet Explorer press (Alt+Shift+shortcut_key) then press (enter)</li>
+    </ul>
+    "
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_statement'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Accessibility Statement (Combination + 0):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_statement'),
+    '#field_prefix' => $base_url.'/',
+    '#description' => t(''), 
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_home'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Home Page (Combination + 1):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_home') ? theme_get_setting('gwt_drupal_acc_home') : '',
+    '#field_prefix' => $base_url.'/',
+    '#description' => t('<strong>Default value</strong>: home'), 
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_maincontent'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Main Content (Combination + R):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_maincontent') ? theme_get_setting('gwt_drupal_acc_maincontent') : '#main-content',
+    '#description' => t(''), 
+    '#field_prefix' => '{current_url}/',
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_faq'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('FAQ (Combination + 5):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_faq'),
+    '#field_prefix' => $base_url.'/',
+    '#description' => t(''), 
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_contact'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Contact (Combination + C):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_contact'),
+    '#maxlength' => 30,
+    '#field_prefix' => $base_url.'/',
+    '#description' => t(''), 
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_feedback'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Feedback (Combination + K):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_feedback'),
+    '#maxlength' => 30,
+    '#field_prefix' => $base_url.'/',
+    '#description' => t(''), 
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_sitemap'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Site Map (Combination + M):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_sitemap') ? theme_get_setting('gwt_drupal_acc_sitemap') : '#footer',
+    '#maxlength' => 30,
+    '#description' => t(''), 
+    '#field_prefix' => '{current_url}/',
+  );
+
+  $form['gwt_drupal_acc']['gwt_drupal_acc_search'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Search (Combination + S):'), 
+    '#default_value' => theme_get_setting('gwt_drupal_acc_search') ? theme_get_setting('gwt_drupal_acc_search') : 'search/node/',
+    '#maxlength' => 30,
+    '#description' => t(''), 
+    '#field_prefix' => $base_url.'/',
   );
 
 /*
