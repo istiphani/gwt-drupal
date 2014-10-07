@@ -162,7 +162,10 @@ function _gwt_drupal_helper_install_content_slides(){
     );
     field_create_instance($instance);
   }
-  
+
+  drupal_set_message('Created new content type: '.l('GWT Slides', 'node/add/gwt-slides'));
+  drupal_set_message('Created new block: '.l('GWT Banner Image Slider', 'admin/structure/block/manage/gwt_drupal_helper/gwt_drupal_helper_slides/configure'));
+  drupal_set_message('Created new block: '.l('GWT Transparency Seal', 'admin/structure/block/manage/gwt_drupal_helper/gwt_drupal_helper_trans_seal/configure'));
 }
 
 /**

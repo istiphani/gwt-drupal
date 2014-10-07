@@ -6,3 +6,4 @@ dependencies[] = image
 dependencies[] = field
 dependencies[] = block
 dependencies[] = jquery_update
+configure = node/add/gwt-slides
