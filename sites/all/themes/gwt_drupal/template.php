@@ -597,6 +597,7 @@ function gwt_drupal_preprocess_page(&$variables, $hook) {
       );
   }
 
+  // accesibility page that loads all the accesibility theme_settings.
   $variables['accesibility'] = '<ul>';
   foreach($accessibility as $access_key => $data){
     $variables['accesibility'] .= '<li>';
@@ -621,8 +622,6 @@ function gwt_drupal_preprocess_page(&$variables, $hook) {
     $variables['accesibility'] .= '<li><a href="'.$gwt_drupal_acc_sitemap.'" accesskey="M">Sitemap</a></li>';
   }
   $variables['accesibility'] .= '</ul>';
-
-  // TODO: create an auto accesibility page that loads all the accesibility theme_settings.
 }
 
 /**
